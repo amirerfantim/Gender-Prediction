@@ -1,0 +1,86 @@
+/* Sets up the body to be a flex container with its content centered both vertically and horizontally, and with children laid out in a column */
+body {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr;
+  background-image: url(assets/wallpaper.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  height: 100vh;
+  color: #333;
+}
+
+/* Styles the .main div as a grid container, centers its items, and adds spacing and styling */
+.main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto; /* Define two columns */
+  gap: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Styles for form elements like inputs and radio buttons */
+.input-name, .radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input[type="text"], .btn {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, .btn:hover {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.btn {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+/* Radio button customization */
+.radio-item {
+  display: flex;
+  align-items: center;
+}
+
+.radio-item label {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Error message styles */
+#error {
+  display: none;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Additional styling for saved answers and predictions */
+.saved-answer-area, #gender-txt, #gender-val {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  margin-top: 10px;
+}
