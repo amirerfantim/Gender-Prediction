@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata for the document -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gender Prediction</title>
+
+  <!-- Link to external CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Main content container -->
 <div class="main">
+  <!-- Form container -->
   <div class="form-container">
+    <!-- Title section -->
     <div class="title">
       <h1>Mr. or Mrs.?</h1>
     </div>
+
+    <!-- User input form -->
     <form id="form">
+      <!-- Name input field -->
       <div class="input-name">
         <label for="name"> Name:</label>
         <input type="text" id="name" name="name">
       </div>
+
+      <!-- Radio button group for gender selection -->
       <div class="radio-group">
         <div class="radio-item">
           <input type="radio" id="male" name="radio-group" value="male">
@@ -27,21 +38,33 @@
           <label for="female">Female</label>
         </div>
       </div>
+
+      <!-- Buttons for form submission and saving data -->
       <div class="buttons">
         <button type="submit" class="btn">Submit</button>
         <button type="button" id="save" class="btn">Save</button>
       </div>
     </form>
   </div>
+
+  <!-- Prediction display area -->
   <div class="prediction">
     <h2>Prediction</h2>
     <div id="gender-txt">GENDER</div>
     <div id="gender-val">Probability</div>
+
+    <!-- Display area for saved answers -->
     <div class="saved-answer-area" id="saved-answer">SAVED INFO</div>
+
+    <!-- Button to clear saved data -->
     <button type="button" id="clear" class="btn">Clear</button>
   </div>
 </div>
+
+<!-- Error message display area -->
 <div id="error"></div>
+
+<!-- Link to external JavaScript file -->
 <script src="script.js"></script>
 </body>
 </html>

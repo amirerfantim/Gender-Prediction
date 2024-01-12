@@ -1,4 +1,4 @@
-/* Sets up the body to be a flex container with its content centered both vertically and horizontally, and with children laid out in a column */
+/* Establishes the body as a grid container, centers content, and sets the background with a full-screen image and specific styling */
 body {
   display: grid;
   place-items: center;
@@ -14,12 +14,12 @@ body {
   color: #333;
 }
 
-/* Styles the .main div as a grid container, centers its items, and adds spacing and styling */
+/* Configures .main div with a grid layout, center alignment, and adds aesthetic enhancements like shadow and background */
 .main {
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: auto auto; /* Define two columns */
+  grid-template-columns: auto auto; /* Two-column layout */
   gap: 40px;
   padding: 20px;
   border-radius: 8px;
@@ -28,7 +28,7 @@ body {
   margin-top: 20px;
 }
 
-/* Styles for form elements like inputs and radio buttons */
+/* Defines styles for various form elements, including layout and margins */
 .input-name, .radio-group {
   display: flex;
   flex-direction: column;
@@ -36,6 +36,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Sets styling for text inputs and buttons, with transitions for interactive states */
 input[type="text"], .btn {
   padding: 10px;
   border: 1px solid #ddd;
@@ -48,7 +49,7 @@ input[type="text"]:focus, .btn:hover {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Button styles */
+/* Configures the appearance of buttons, including color and cursor interaction */
 .btn {
   cursor: pointer;
   background-color: #4caf50;
@@ -56,7 +57,7 @@ input[type="text"]:focus, .btn:hover {
   border: none;
 }
 
-/* Radio button customization */
+/* Customizes the layout and styling of radio buttons */
 .radio-item {
   display: flex;
   align-items: center;
@@ -67,7 +68,7 @@ input[type="text"]:focus, .btn:hover {
   cursor: pointer;
 }
 
-/* Error message styles */
+/* Styles for displaying error messages in a distinct manner */
 #error {
   display: none;
   background-color: #ff4d4d;
@@ -77,7 +78,7 @@ input[type="text"]:focus, .btn:hover {
   margin-top: 10px;
 }
 
-/* Additional styling for saved answers and predictions */
+/* Styles for additional elements like saved answers and other predictive text areas */
 .saved-answer-area, #gender-txt, #gender-val {
   padding: 10px;
   border-radius: 5px;
