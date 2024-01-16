@@ -12,6 +12,14 @@ class FormDataManager {
     this.name = name;
   }
 
+  // Validates the name
+  validateName() {
+    const regex = /^[A-Za-z\s]+$/;
+    if (!this.name.match(regex)) {
+      throw new Error("Name must contain only spaces and English letters.");
+    }
+  }
+
   // Updates the gender property based on selected radio button
   updateGender(gender) {
     this.gender = gender;
@@ -20,6 +28,7 @@ class FormDataManager {
   // Fetches gender prediction from the API
   async fetchGenderPrediction() {
     if (!this.name) throw new Error("Name is required");
+    this.validateName();
     try {
       const response = await fetch(`${this.apiUrl}${this.name}`);
       if (!response.ok) throw new Error("Failed to fetch data");
